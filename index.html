@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartHarvest</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">SmartHarvest</div>
+    <button class="mobile-toggle" id="navToggle">☰</button>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#" data-target="home">🏠 Home</a></li>
+        <li><a href="#" data-target="dashboard">📊 Dashboard</a></li>
+        <li><a href="#" data-target="opportunities">💡 Opportunities</a></li>
+        <li><a href="#" data-target="learn">📚 Learn</a></li>
+        <li><a href="#" data-target="simulator">🧮 Simulator</a></li>
+        <li><button class="btn-account">👤 Account</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section id="intro" class="active">
+      <h1>Welcome to SmartHarvest 🌾</h1>
+      <p>Your AI-powered Tax-Loss Harvesting Assistant</p>
+      <p>Click on a section above to get started.</p>
+    </section>
+
+    <section id="home">
+      <h1>SmartHarvest: Smarter Tax Planning</h1>
+      <p>Analyze, harvest, and save—automatically.</p>
+      <ul>
+        <li>📊 Real-time portfolio insights</li>
+        <li>📉 Tax-loss harvesting alerts</li>
+        <li>📈 Rebalancing suggestions</li>
+      </ul>
+      <button onclick="alert('Demo coming soon!')">Try Demo</button>
+    </section>
+
+    <section id="dashboard">
+      <h2>Dashboard Overview</h2>
+      <div class="dashboard-cards">
+        <div class="card">
+          <h3>Potential Savings</h3>
+          <p>₹1,45,000</p>
+          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        </div>
+        <div class="card">
+          <h3>Assets Analyzed</h3>
+          <p>32</p>
+          <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+        </div>
+        <div class="card">
+          <h3>Suggestions</h3>
+          <p>6</p>
+          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="opportunities">
+      <h2>Harvesting Opportunities</h2>
+      <ul class="opportunity-list">
+        <li>🔄 Sell underperforming Fund A and switch to Fund B</li>
+        <li>📉 Offset short-term gains from Fund C</li>
+        <li>📈 Buy similar assets to maintain exposure</li>
+      </ul>
+      <button onclick="alert('More details coming soon!')">See Full Opportunities</button>
+    </section>
+
+    <section id="learn">
+      <h2>Learn About Tax Harvesting</h2>
+      <p>Minimize taxes while optimizing returns.</p>
+      <form id="quizForm">
+        <h3>Quick Quiz</h3>
+        <label>1. What is the primary goal of tax harvesting?</label><br>
+        <select>
+          <option value="">--Select--</option>
+          <option>Increase portfolio risk</option>
+          <option>Minimize tax liability</option>
+        </select><br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="simulator">
+      <h2>Tax Benefit Simulator</h2>
+      <p>Estimate your savings by simulating different harvesting strategies.</p>
+      <button onclick="simulateSavings()">Run Simulation</button>
+      <canvas id="savingsChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SmartHarvest. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal for Account -->
+  <div class="modal" id="accountModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Account</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Login / Sign Up</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
